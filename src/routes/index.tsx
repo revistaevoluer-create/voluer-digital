@@ -44,7 +44,7 @@ function Home() {
 
       <main className="mx-auto max-w-6xl px-4">
         <section className="grid gap-8 py-10 lg:grid-cols-[1.75fr_1fr]">
-          <article className="border border-border">
+          <article className="self-start border border-border">
             <Link to="/materia/$slug" params={{ slug: featured.slug }} className="block">
               <img
                 src={featured.image}
