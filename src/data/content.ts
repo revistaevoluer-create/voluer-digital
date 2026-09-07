@@ -49,6 +49,23 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "a-advocacia-que-se-reinventa-longe-dos-tribunais",
+    category: "Jurídico",
+    title: "A advocacia que se reinventa longe dos tribunais",
+    excerpt:
+      "Bancas de médio porte trocam a litigância pela prevenção de conflitos e passam a ocupar a mesa de decisões estratégicas das empresas brasileiras.",
+    author: "Redação Évoluer",
+    date: "7 set. 2026",
+    readingTime: "11 min",
+    image: artJuridico,
+    body: [
+      "O escritório de advocacia deixou de ser o último recurso. Em setores que vivem de contratos longos e margens apertadas, a assessoria jurídica passou a ser convocada antes da assinatura — e não depois da crise.",
+      "A mudança tem endereço claro: bancas de médio porte que investiram em compliance, mediação e desenho de contratos, e que hoje disputam espaço com grandes estruturas oferecendo previsibilidade em vez de litígio.",
+      "Para as advogadas e advogados ouvidos pela Évoluer, o novo mandato é outro: entender o negócio do cliente com a mesma profundidade com que se lê a lei. Quem faz isso reduz processos, custos e desgaste institucional.",
+      "O efeito colateral é cultural. A liderança jurídica que antes media resultado por causas ganhas passa a medir por conflitos evitados — uma métrica silenciosa, difícil de fotografar, mas decisiva no balanço.",
+    ],
+  },
+  {
     slug: "o-poder-silencioso-das-mulheres-que-redesenham-o-capitalismo-brasileiro",
     category: "Negócios",
     title: "O poder silencioso das mulheres que redesenham o capitalismo brasileiro",
