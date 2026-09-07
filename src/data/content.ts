@@ -1,0 +1,142 @@
+import heroNegocios from "@/assets/hero-negocios.jpg";
+import artSaude from "@/assets/art-saude.jpg";
+import artModa from "@/assets/art-moda.jpg";
+import artTecnologia from "@/assets/art-tecnologia.jpg";
+import artEsporte from "@/assets/art-esporte.jpg";
+import artCinema from "@/assets/art-cinema.jpg";
+
+export const categories = [
+  "Saúde",
+  "Moda",
+  "Beleza",
+  "Policial",
+  "Jurídico",
+  "Tecnologia",
+  "Esporte",
+  "Negócios",
+  "Entretenimento e Cultura",
+  "Pets e Mundo Animal",
+  "Influencer",
+  "Educação",
+  "Fé",
+  "Música",
+  "Cinema",
+  "Gamer",
+  "TV",
+];
+
+export const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+export type Article = {
+  slug: string;
+  category: string;
+  title: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  readingTime: string;
+  image: string;
+  body: string[];
+};
+
+export const articles: Article[] = [
+  {
+    slug: "o-poder-silencioso-das-mulheres-que-redesenham-o-capitalismo-brasileiro",
+    category: "Negócios",
+    title: "O poder silencioso das mulheres que redesenham o capitalismo brasileiro",
+    excerpt:
+      "De Minas Gerais ao Nordeste, líderes femininas constroem impérios longe dos holofotes e provam que a nova geração de executivas joga com outras regras.",
+    author: "Redação Évoluer",
+    date: "7 set. 2026",
+    readingTime: "14 min",
+    image: heroNegocios,
+    body: [
+      "Elas não aparecem nos rankings de bilionários nem disputam capas de revistas de negócios. Ainda assim, comandam operações que movimentam cadeias inteiras de fornecedores, empregam milhares de pessoas e definem o ritmo de setores que, até pouco tempo, eram descritos como territórios masculinos.",
+      "A reportagem da Évoluer ouviu executivas de cinco estados para entender o que muda quando a liderança deixa de ser performance e passa a ser método: decisões mais lentas, times mais estáveis e uma leitura de risco que privilegia a continuidade sobre o espetáculo.",
+      "O resultado é um capitalismo menos ruidoso, mas mais resiliente — e uma geração de gestoras que aprendeu a transformar invisibilidade em vantagem competitiva.",
+    ],
+  },
+  {
+    slug: "a-nova-medicina-preventiva-chega-ao-interior",
+    category: "Saúde",
+    title: "A nova medicina preventiva chega ao interior",
+    excerpt:
+      "Programas de rastreamento precoce começam a mudar indicadores em cidades com menos de 50 mil habitantes.",
+    author: "Redação Évoluer",
+    date: "6 set. 2026",
+    readingTime: "8 min",
+    image: artSaude,
+    body: [
+      "Longe dos grandes centros, equipes reduzidas apostam em diagnóstico precoce como principal ferramenta de saúde pública.",
+      "A aposta é simples e difícil ao mesmo tempo: chegar antes do sintoma. Os primeiros números indicam queda em internações evitáveis.",
+    ],
+  },
+  {
+    slug: "o-minimalismo-brasileiro-que-conquistou-as-passarelas",
+    category: "Moda",
+    title: "O minimalismo brasileiro que conquistou as passarelas",
+    excerpt:
+      "Alfaiataria leve, tecidos naturais e uma paleta contida definem a estação que aposta na permanência.",
+    author: "Redação Évoluer",
+    date: "5 set. 2026",
+    readingTime: "6 min",
+    image: artModa,
+    body: [
+      "A estação abandona o excesso e se organiza em torno de peças que atravessam anos, não temporadas.",
+      "Estilistas falam de um luxo silencioso: caimento impecável, materiais honestos e nenhuma pressa.",
+    ],
+  },
+  {
+    slug: "inteligencia-artificial-nas-redacoes-brasileiras",
+    category: "Tecnologia",
+    title: "Inteligência artificial nas redações brasileiras",
+    excerpt:
+      "Editores discutem os limites entre apuração humana e automação na produção de notícias.",
+    author: "Redação Évoluer",
+    date: "5 set. 2026",
+    readingTime: "9 min",
+    image: artTecnologia,
+    body: [
+      "A tecnologia acelerou tarefas repetitivas, mas escancarou uma pergunta antiga: quem responde pelo que é publicado?",
+      "Nas redações ouvidas pela Évoluer, a resposta converge para o mesmo ponto — a assinatura continua sendo humana.",
+    ],
+  },
+  {
+    slug: "selecao-feminina-garante-vaga-na-final",
+    category: "Esporte",
+    title: "Seleção feminina garante vaga na final do Sul-Americano",
+    excerpt: "Vitória construída no segundo tempo coloca o Brasil de volta à decisão do torneio.",
+    author: "Redação Évoluer",
+    date: "4 set. 2026",
+    readingTime: "5 min",
+    image: artEsporte,
+    body: [
+      "Sob chuva forte, a equipe brasileira controlou o meio-campo e resolveu a partida em dez minutos decisivos.",
+      "A final acontece no próximo fim de semana, com transmissão confirmada para todo o país.",
+    ],
+  },
+  {
+    slug: "filme-brasileiro-estreia-em-cannes",
+    category: "Cinema",
+    title: "Filme brasileiro estreia em Cannes e conquista prêmio de documentário",
+    excerpt: "Produção independente filmada no sertão emociona a crítica internacional.",
+    author: "Redação Évoluer",
+    date: "3 set. 2026",
+    readingTime: "7 min",
+    image: artCinema,
+    body: [
+      "Rodado ao longo de quatro anos, o documentário acompanha três famílias e a travessia de uma seca histórica.",
+      "A premiação abre caminho para uma distribuição nacional ainda neste ano.",
+    ],
+  },
+];
+
+export const featured = articles[0];
+export const secondary = articles.slice(1, 4);
+export const latest = articles.slice(1);
