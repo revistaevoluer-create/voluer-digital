@@ -137,6 +137,6 @@ export const articles: Article[] = [
   },
 ];
 
-export const featured = articles[0];
+export const featured = articles[0]!;
 export const secondary = articles.slice(1, 4);
 export const latest = articles.slice(1);
