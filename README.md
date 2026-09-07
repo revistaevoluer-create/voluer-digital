@@ -1,14 +1,31 @@
-# Welcome to your Lovable project
+# Évoluer Digital
+
+quero criar um site para minha revista eletrônica, similar a este do link:
+
+https://www.materiajornalistica.com/
+
+
+essa é a identidade visual da minha marca. Minha revista se chama REVISTA ÉVOLUER. 
+
+Nossas categorias serão:
+
+Saúde Moda Beleza Policial Jurídico Tecnologia Esporte Negócios Entretenimento e Cultura Pets e Mundo Animal Influencer Educação Fé Música Cinema Gamer Tv.
+
+Deve ter espaços publicitários.
+
+Não faça com tantos espaços para conteúdo pois estamos começando agora e temos poucas matérias para postar.
+
+O estilo pode seguir o da segunda imagem anexada.
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/bd3ae7b6-13f4-467a-a86f-e1aa00a5b090).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +37,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
