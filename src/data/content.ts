@@ -4,6 +4,7 @@ import artModa from "@/assets/art-moda.jpg";
 import artTecnologia from "@/assets/art-tecnologia.jpg";
 import artEsporte from "@/assets/art-esporte.jpg";
 import artCinema from "@/assets/art-cinema.jpg";
+import artJuridico from "@/assets/art-juridico.jpg";
 
 export const categories = [
   "Saúde",
