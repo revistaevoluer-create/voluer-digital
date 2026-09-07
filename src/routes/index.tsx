@@ -3,7 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { AdSlot } from "@/components/site/AdSlot";
 import { ArticleCard } from "@/components/site/ArticleCard";
-import { featured, latest, secondary, slugify } from "@/data/content";
+import { editorialPillars, featured, latest, secondary, slugify } from "@/data/content";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -147,40 +147,48 @@ function Home() {
           </div>
         </section>
 
-        <section
-          id="newsletter"
-          className="mb-16 border border-gold-deep/40 bg-card px-6 py-12 text-center md:px-16"
-        >
-          <span className="label-mono text-gold">Newsletter Évoluer</span>
-          <h2 className="mx-auto mt-4 max-w-xl text-3xl leading-tight md:text-4xl">
-            Receba a próxima edição antes de todo mundo
-          </h2>
-          <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground">
-            Uma carta semanal com as reportagens que estamos apurando e os bastidores da redação.
+      </main>
+
+      <section id="newsletter" className="border-t border-gold-deep/20 bg-ink px-4 py-12 md:py-20">
+        <div className="relative mx-auto max-w-6xl border border-gold-deep/50 px-6 py-14 text-center md:px-16 md:py-20">
+          <span aria-hidden="true" className="absolute left-4 top-4 h-5 w-5 border-l border-t border-gold" />
+          <span aria-hidden="true" className="absolute right-4 top-4 h-5 w-5 border-r border-t border-gold" />
+          <span aria-hidden="true" className="absolute bottom-4 left-4 h-5 w-5 border-b border-l border-gold" />
+          <span aria-hidden="true" className="absolute bottom-4 right-4 h-5 w-5 border-b border-r border-gold" />
+
+          <div className="flex items-center justify-center gap-4">
+            <span className="h-px w-8 bg-gold-deep/60 md:w-16" />
+            <span className="label-mono text-gold">Assine a Évoluer</span>
+            <span className="h-px w-8 bg-gold-deep/60 md:w-16" />
+          </div>
+          <h2 className="mt-6 text-3xl leading-tight md:text-5xl">Conteúdo que transforma.</h2>
+          <p className="mt-3 font-display text-lg italic text-gold-deep md:text-2xl">
+            {editorialPillars.join(" · ")}
+          </p>
+          <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
+            Receba nossa seleção editorial e acompanhe as histórias que movem pessoas e negócios.
           </p>
           <form
-            className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
+            className="mx-auto mt-8 flex max-w-lg flex-col gap-3 sm:flex-row"
             onSubmit={(event) => event.preventDefault()}
           >
-            <label className="sr-only" htmlFor="newsletter-email">
-              Seu e-mail
-            </label>
+            <label className="sr-only" htmlFor="newsletter-email">Seu e-mail</label>
             <input
               id="newsletter-email"
               type="email"
               required
               placeholder="seu@email.com"
-              className="flex-1 border border-border bg-background px-4 py-3 text-sm text-foreground outline-none placeholder:text-muted-foreground/60 focus:border-gold"
+              className="min-w-0 flex-1 border border-border bg-background px-4 py-3 text-sm text-foreground outline-none placeholder:text-muted-foreground/60 focus:border-gold"
             />
             <button
               type="submit"
-              className="label-mono bg-gold px-6 py-3 text-primary-foreground transition-colors hover:bg-gold-deep"
+              className="label-mono bg-gold px-7 py-3 text-primary-foreground transition-colors hover:bg-gold-deep"
             >
-              Assinar
+              Quero receber
             </button>
           </form>
-        </section>
-      </main>
+        </div>
+      </section>
 
       <Footer />
     </div>

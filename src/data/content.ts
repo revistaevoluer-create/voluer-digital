@@ -25,6 +25,8 @@ export const categories = [
   "TV",
 ];
 
+export const editorialPillars = ["Negócios", "Carreira", "Liderança", "Personalidade"];
+
 export const slugify = (value: string) =>
   value
     .toLowerCase()
