@@ -9,7 +9,6 @@ export const categories = [
   "Saúde",
   "Moda",
   "Beleza",
-  "Policial",
   "Jurídico",
   "Tecnologia",
   "Esporte",

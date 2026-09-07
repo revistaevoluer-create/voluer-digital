@@ -27,10 +27,10 @@ export function Header() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5">
           <span className="label-mono text-gold-deep">{today || "\u00a0"}</span>
           <nav className="hidden items-center gap-4 md:flex">
-            {["Newsletter", "Anuncie", "Assinar"].map((item) => (
+            {["Anuncie", "Anunciar"].map((item) => (
               <a
                 key={item}
-                href="#newsletter"
+                href="#anunciar"
                 className="label-mono text-muted-foreground transition-colors hover:text-gold"
               >
                 {item}
@@ -46,10 +46,10 @@ export function Header() {
           <Logo />
         </Link>
         <a
-          href="#newsletter"
+          href="#anunciar"
           className="label-mono bg-gold px-6 py-3 text-primary-foreground transition-colors hover:bg-gold-deep"
         >
-          Assinar
+          Anunciar
         </a>
       </div>
 
@@ -78,7 +78,7 @@ export function Header() {
           {[0, 1].map((copy) => (
             <span key={copy} className="label-mono px-6 text-primary-foreground">
               Bem-vindo à Revista Évoluer · Jornalismo editorial · Nova edição disponível ·
-              Assine a newsletter semanal ·
+              Anuncie sua marca ·
             </span>
           ))}
         </div>
