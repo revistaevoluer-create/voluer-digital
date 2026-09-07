@@ -40,8 +40,8 @@ export function Footer() {
                 © {new Date().getFullYear()} Revista Évoluer. Todos os direitos reservados.
               </p>
               <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
-                <a href="#newsletter" className="label-mono text-muted-foreground transition-colors hover:text-gold">
-                  Assine
+                <a href="#anunciar" className="label-mono text-muted-foreground transition-colors hover:text-gold">
+                  Anuncie
                 </a>
                 <a href="mailto:contato@revistaevoluer.com.br" className="label-mono text-muted-foreground transition-colors hover:text-gold">
                   Contato

@@ -149,7 +149,7 @@ function Home() {
 
       </main>
 
-      <section id="newsletter" className="border-t border-gold-deep/20 bg-ink px-4 py-12 md:py-20">
+      <section id="anunciar" className="border-t border-gold-deep/20 bg-ink px-4 py-12 md:py-20">
         <div className="relative mx-auto max-w-6xl border border-gold-deep/50 px-6 py-14 text-center md:px-16 md:py-20">
           <span aria-hidden="true" className="absolute left-4 top-4 h-5 w-5 border-l border-t border-gold" />
           <span aria-hidden="true" className="absolute right-4 top-4 h-5 w-5 border-r border-t border-gold" />
@@ -158,35 +158,22 @@ function Home() {
 
           <div className="flex items-center justify-center gap-4">
             <span className="h-px w-8 bg-gold-deep/60 md:w-16" />
-            <span className="label-mono text-gold">Assine a Évoluer</span>
+            <span className="label-mono text-gold">Anuncie na Évoluer</span>
             <span className="h-px w-8 bg-gold-deep/60 md:w-16" />
           </div>
-          <h2 className="mt-6 text-3xl leading-tight md:text-5xl">Conteúdo que transforma.</h2>
+          <h2 className="mt-6 text-3xl leading-tight md:text-5xl">Sua marca na nossa audiência.</h2>
           <p className="mt-3 font-display text-lg italic text-gold-deep md:text-2xl">
             {editorialPillars.join(" · ")}
           </p>
           <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
-            Receba nossa seleção editorial e acompanhe as histórias que movem pessoas e negócios.
+            Fale com quem decide. Espaços publicitários para marcas que acompanham nossos editoriais.
           </p>
-          <form
-            className="mx-auto mt-8 flex max-w-lg flex-col gap-3 sm:flex-row"
-            onSubmit={(event) => event.preventDefault()}
+          <a
+            href="mailto:contato@revistaevoluer.com.br"
+            className="mx-auto mt-8 inline-block label-mono bg-gold px-7 py-3 text-primary-foreground transition-colors hover:bg-gold-deep"
           >
-            <label className="sr-only" htmlFor="newsletter-email">Seu e-mail</label>
-            <input
-              id="newsletter-email"
-              type="email"
-              required
-              placeholder="seu@email.com"
-              className="min-w-0 flex-1 border border-border bg-background px-4 py-3 text-sm text-foreground outline-none placeholder:text-muted-foreground/60 focus:border-gold"
-            />
-            <button
-              type="submit"
-              className="label-mono bg-gold px-7 py-3 text-primary-foreground transition-colors hover:bg-gold-deep"
-            >
-              Quero receber
-            </button>
-          </form>
+            Quero anunciar
+          </a>
         </div>
       </section>
 
