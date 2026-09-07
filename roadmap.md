@@ -1,0 +1,3 @@
+- [x] Reorganizar a seção final conforme a referência
+- [x] Destacar os quatro pilares editoriais
+- [x] Validar visualmente em desktop e celular
