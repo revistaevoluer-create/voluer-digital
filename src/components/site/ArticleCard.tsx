@@ -15,7 +15,7 @@ export function ArticleCard({ article }: { article: Article }) {
           loading="lazy"
           width={1200}
           height={800}
-          className="aspect-[3/2] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          className="aspect-[3/2] w-full object-cover object-[50%_18%] transition-transform duration-700 group-hover:scale-[1.03]"
         />
       </Link>
       <span className="label-mono mt-4 text-gold">{article.category}</span>
