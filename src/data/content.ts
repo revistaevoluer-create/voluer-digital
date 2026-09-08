@@ -4,7 +4,7 @@ import artModa from "@/assets/art-moda.jpg";
 import artTecnologia from "@/assets/art-tecnologia.jpg";
 import artEsporte from "@/assets/art-esporte.jpg";
 import artCinema from "@/assets/art-cinema.jpg";
-import artJuridico from "@/assets/art-juridico.jpg";
+import nairSaboia from "@/assets/nair-saboia.jpg.asset.json";
 
 export const categories = [
   "Saúde",
@@ -49,20 +49,23 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    slug: "a-advocacia-que-se-reinventa-longe-dos-tribunais",
+    slug: "do-direito-a-psicologia-a-trajetoria-de-nair-saboia",
     category: "Jurídico",
-    title: "A advocacia que se reinventa longe dos tribunais",
+    title: "Do Direito à Psicologia: a trajetória de Nair Saboia",
     excerpt:
-      "Bancas de médio porte trocam a litigância pela prevenção de conflitos e passam a ocupar a mesa de decisões estratégicas das empresas brasileiras.",
-    author: "Redação Évoluer",
-    date: "7 set. 2026",
-    readingTime: "11 min",
-    image: artJuridico,
+      "Na prática do Direito de Família, Nair Saboia percebeu que muitos conflitos que chegam ao Judiciário carregam dores emocionais que a aplicação da lei, sozinha, não consegue resolver.",
+    author: "Revista Évoluer",
+    date: "8 set. 2026",
+    readingTime: "8 min",
+    image: nairSaboia.url,
     body: [
-      "O escritório de advocacia deixou de ser o último recurso. Em setores que vivem de contratos longos e margens apertadas, a assessoria jurídica passou a ser convocada antes da assinatura — e não depois da crise.",
-      "A mudança tem endereço claro: bancas de médio porte que investiram em compliance, mediação e desenho de contratos, e que hoje disputam espaço com grandes estruturas oferecendo previsibilidade em vez de litígio.",
-      "Para as advogadas e advogados ouvidos pela Évoluer, o novo mandato é outro: entender o negócio do cliente com a mesma profundidade com que se lê a lei. Quem faz isso reduz processos, custos e desgaste institucional.",
-      "O efeito colateral é cultural. A liderança jurídica que antes media resultado por causas ganhas passa a medir por conflitos evitados — uma métrica silenciosa, difícil de fotografar, mas decisiva no balanço.",
+      "Divórcios, disputas de guarda, partilhas e outros conflitos familiares frequentemente revelam algo que vai além da controvérsia jurídica: rupturas, medos, ressentimentos e histórias que ainda não foram elaboradas.",
+      "Foi nesse cotidiano que Nair compreendeu que o advogado pode exercer um papel que ultrapassa o domínio técnico da legislação. Identificar a dimensão emocional do conflito permite construir caminhos mais conscientes e, muitas vezes, evitar que a disputa se transforme em um litígio ainda mais doloroso.",
+      "“Muitas vezes, o que chega ao balcão do Judiciário como um pedido de partilha ou de pensão é, na verdade, um pedido de socorro emocional ou a dor de uma ruptura não elaborada.”",
+      "Para ampliar essa perspectiva, Nair ingressou na faculdade de Psicologia. A proposta não é abandonar a advocacia, mas somar conhecimentos e construir uma ponte entre a razão jurídica e uma escuta mais sensível.",
+      "A nova etapa dessa trajetória ganha forma com o projeto Atendimento Conectado, concebido como um modelo de consultoria jurídica voltado à gestão de conflitos emocionais no período pré-litígio. A iniciativa pretende acolher famílias em momentos de crise antes mesmo do ajuizamento de uma ação, criando um espaço seguro para que os aspectos jurídicos e humanos do conflito sejam compreendidos com mais profundidade.",
+      "Com a formação em Psicologia em andamento, Nair busca qualificar ainda mais sua atuação: mediar acordos com empatia, compreender melhor as necessidades envolvidas e ajudar seus clientes a atravessar transições familiares dolorosas com estabilidade e dignidade.",
+      "Sua trajetória reafirma uma premissa essencial: o Direito é feito por pessoas e para pessoas. E, em sua forma mais nobre, exige conhecimento, responsabilidade e, sobretudo, humanidade.",
     ],
   },
   {
