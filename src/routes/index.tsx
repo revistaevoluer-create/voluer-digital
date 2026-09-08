@@ -49,8 +49,8 @@ function Home() {
               <img
                 src={featured.image}
                 alt={featured.title}
-                width={1600}
-                height={1104}
+                width={1005}
+                height={628}
                 className="aspect-[16/10] w-full object-cover"
               />
             </Link>
