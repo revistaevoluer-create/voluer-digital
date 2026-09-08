@@ -50,7 +50,7 @@ function Home() {
                 src={featured.image}
                 alt={featured.title}
                 width={1005}
-                height={1580}
+                height={628}
                 className="aspect-[16/10] w-full object-cover"
               />
             </Link>
