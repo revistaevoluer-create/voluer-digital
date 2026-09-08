@@ -4,7 +4,7 @@ import artModa from "@/assets/art-moda.jpg";
 import artTecnologia from "@/assets/art-tecnologia.jpg";
 import artEsporte from "@/assets/art-esporte.jpg";
 import artCinema from "@/assets/art-cinema.jpg";
-import nairSaboia from "@/assets/nair-saboia-hero.jpg.asset.json";
+import nairSaboia from "@/assets/nair-saboia-hero-reframed.jpg.asset.json";
 
 export const categories = [
   "Saúde",

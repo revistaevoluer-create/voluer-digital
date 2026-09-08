@@ -66,7 +66,7 @@ function ArticlePage() {
           alt={article.title}
           width={1200}
           height={800}
-          className="mt-8 aspect-[3/2] w-full object-cover object-[50%_18%]"
+          className="mt-8 aspect-[3/2] w-full object-cover object-top"
         />
 
         <div className="mt-10 space-y-6">

@@ -51,7 +51,7 @@ function Home() {
                 alt={featured.title}
                 width={1005}
                 height={628}
-                className="aspect-[16/10] w-full object-cover object-[50%_18%]"
+                className="aspect-[16/10] w-full object-cover object-top"
               />
             </Link>
             <div className="p-6 md:p-8">
