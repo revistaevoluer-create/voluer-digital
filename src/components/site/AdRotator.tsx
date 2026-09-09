@@ -18,8 +18,8 @@ export function AdRotator({ ads }: { ads: Ad[] }) {
     return () => clearInterval(timer);
   }, [ads.length]);
 
-  if (ads.length === 0) return null;
   const ad = ads[index % ads.length];
+  if (!ad) return null;
 
   return (
     <a
