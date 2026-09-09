@@ -18,11 +18,6 @@ export const categories = [
   "Pets e Mundo Animal",
   "Influencer",
   "Educação",
-  "Fé",
-  "Música",
-  "Cinema",
-  "Gamer",
-  "TV",
 ];
 
 export const editorialPillars = ["Negócios", "Carreira", "Liderança", "Personalidade"];
