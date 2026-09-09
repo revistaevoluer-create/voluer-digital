@@ -49,7 +49,12 @@ function ArticlePage() {
     <div className="min-h-screen">
       <Header />
       <main className="mx-auto max-w-6xl px-4 py-12">
-        <AdSlot format="billboard" />
+        <AdSlot
+          format="billboard"
+          image={topAd.image}
+          href={topAd.href}
+          advertiser={topAd.advertiser}
+        />
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_300px]">
           <article>
