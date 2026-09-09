@@ -16,5 +16,5 @@ export type Ad = {
 export const topAd: Ad = {
   advertiser: "Editora Juridis",
   image: editoraJuridis.url,
-  href: "",
+  href: "https://www.juridis.com.br",
 };
