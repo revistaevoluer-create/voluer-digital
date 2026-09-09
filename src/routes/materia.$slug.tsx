@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { AdSlot } from "@/components/site/AdSlot";
 import { articles, slugify } from "@/data/content";
+import { topAd } from "@/data/ads";
 
 export const Route = createFileRoute("/materia/$slug")({
   loader: ({ params }) => {
