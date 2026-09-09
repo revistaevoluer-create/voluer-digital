@@ -18,11 +18,6 @@ export const categories = [
   "Pets e Mundo Animal",
   "Influencer",
   "Educação",
-  "Fé",
-  "Música",
-  "Cinema",
-  "Gamer",
-  "TV",
 ];
 
 export const editorialPillars = ["Negócios", "Carreira", "Liderança", "Personalidade"];
@@ -145,7 +140,7 @@ export const articles: Article[] = [
   },
   {
     slug: "filme-brasileiro-estreia-em-cannes",
-    category: "Cinema",
+    category: "Entretenimento e Cultura",
     title: "Filme brasileiro estreia em Cannes e conquista prêmio de documentário",
     excerpt: "Produção independente filmada no sertão emociona a crítica internacional.",
     author: "Redação Évoluer",
