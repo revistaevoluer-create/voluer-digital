@@ -47,41 +47,49 @@ function ArticlePage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="mx-auto max-w-3xl px-4 py-12">
-        <Link
-          to="/categoria/$slug"
-          params={{ slug: slugify(article.category) }}
-          className="label-mono bg-gold px-3 py-1.5 text-primary-foreground"
-        >
-          {article.category}
-        </Link>
-        <h1 className="mt-6 text-3xl leading-tight md:text-5xl">{article.title}</h1>
-        <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{article.excerpt}</p>
-        <p className="label-mono mt-5 text-gold-deep">
-          {article.author} · {article.date} · {article.readingTime}
-        </p>
+      <main className="mx-auto max-w-6xl px-4 py-12">
+        <AdSlot format="billboard" />
 
-        <img
-          src={article.image}
-          alt={article.title}
-          width={1200}
-          height={800}
-          className="mt-8 aspect-[3/2] w-full object-cover object-center"
-        />
-
-        <div className="mt-10 space-y-6">
-          {article.body.map((paragraph) => (
-            <p key={paragraph} className="text-[1.05rem] leading-8 text-foreground/85">
-              {paragraph}
+        <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_300px]">
+          <article>
+            <Link
+              to="/categoria/$slug"
+              params={{ slug: slugify(article.category) }}
+              className="label-mono bg-gold px-3 py-1.5 text-primary-foreground"
+            >
+              {article.category}
+            </Link>
+            <h1 className="mt-6 text-3xl leading-tight md:text-5xl">{article.title}</h1>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{article.excerpt}</p>
+            <p className="label-mono mt-5 text-gold-deep">
+              {article.author} · {article.date} · {article.readingTime}
             </p>
-          ))}
-        </div>
 
-        <div className="mt-12">
-          <AdSlot format="leaderboard" />
+            <img
+              src={article.image}
+              alt={article.title}
+              width={1200}
+              height={800}
+              className="mt-8 aspect-[3/2] w-full object-cover object-center"
+            />
+
+            <div className="mt-10 space-y-6">
+              {article.body.map((paragraph) => (
+                <p key={paragraph} className="text-[1.05rem] leading-8 text-foreground/85">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </article>
+
+          <aside className="hidden flex-col gap-6 lg:flex">
+            <AdSlot format="vertical" />
+            <AdSlot format="square" />
+          </aside>
         </div>
       </main>
       <Footer />
     </div>
   );
 }
+
