@@ -18,3 +18,16 @@ export const topAd: Ad = {
   image: editoraJuridis.url,
   href: "https://www.juridis.com.br",
 };
+
+/**
+ * Anúncios ativos exibidos em rotação no topo da página inicial,
+ * na lateral esquerda do cabeçalho, abaixo da data.
+ * Cada logo é clicável e leva ao site, rede social ou WhatsApp do anunciante.
+ */
+export const headerAds: Ad[] = [
+  {
+    advertiser: "Editora Juridis",
+    image: editoraJuridis.url,
+    href: "https://www.juridis.com.br",
+  },
+];

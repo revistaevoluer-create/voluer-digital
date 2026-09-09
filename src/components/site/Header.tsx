@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { categories, slugify } from "@/data/content";
+import { headerAds } from "@/data/ads";
+import { AdRotator } from "./AdRotator";
 import { Logo } from "./Logo";
 
 function useTodayLabel() {
@@ -41,7 +43,9 @@ export function Header() {
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-5 px-4 py-7 md:flex-row md:justify-between">
-        <div className="hidden w-40 md:block" />
+        <div className="hidden md:block">
+          <AdRotator ads={headerAds} />
+        </div>
         <Link to="/" aria-label="Revista Évoluer — página inicial">
           <Logo />
         </Link>
