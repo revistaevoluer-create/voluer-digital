@@ -88,7 +88,7 @@ function Home() {
                 {latest.map((article, index) => (
                   <li key={article.slug} className="border-b border-border last:border-b-0">
                     <div className="flex gap-4 p-5">
-                      <span className="font-display text-2xl text-gold-deep/50">
+                      <span className="font-display text-2xl font-medium text-gold-deep/80">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div>
@@ -163,7 +163,7 @@ function Home() {
             <span className="h-px w-8 bg-gold-deep/60 md:w-16" />
           </div>
           <h2 className="mt-6 text-3xl leading-tight md:text-5xl">Sua marca na nossa audiência.</h2>
-          <p className="mt-3 font-display text-lg italic text-gold-deep md:text-2xl">
+          <p className="mt-3 font-display text-lg font-medium text-gold md:text-2xl">
             {editorialPillars.join(" · ")}
           </p>
           <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
