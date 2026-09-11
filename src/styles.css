@@ -82,8 +82,8 @@
   --border: oklch(0.28 0.006 90);
   --input: oklch(0.28 0.006 90);
   --ring: oklch(0.75 0.1 88);
-  --gold: oklch(0.72 0.11 88);
-  --gold-deep: oklch(0.65 0.1 82);
+  --gold: oklch(0.75 0.1 88);
+  --gold-deep: oklch(0.62 0.09 82);
   --ink: oklch(0.11 0 0);
   --chart-1: oklch(0.75 0.1 88);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -130,9 +130,8 @@
 
 @utility label-mono {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
