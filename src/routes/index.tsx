@@ -82,7 +82,7 @@ function Home() {
             <AdSlot format="square" />
             <div className="border border-border">
               <div className="border-b border-border px-5 py-4">
-                <span className="label-mono text-gold">Últimas</span>
+                <span className="label-mono text-gold">Últimas notícias</span>
               </div>
               <ul>
                 {latest.map((article, index) => (
