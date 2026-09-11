@@ -79,6 +79,7 @@ function Home() {
           </article>
 
           <div className="flex flex-col gap-6">
+            <AdSlot format="square" />
             <div className="border border-border">
               <div className="border-b border-border px-5 py-4">
                 <span className="label-mono text-gold">Últimas</span>
@@ -116,8 +117,8 @@ function Home() {
                 ))}
               </ul>
             </div>
-            <AdSlot format="square" />
           </div>
+
         </section>
 
         <div className="pb-12">
