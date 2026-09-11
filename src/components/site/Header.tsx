@@ -1,8 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { categories, slugify } from "@/data/content";
-import { headerAds } from "@/data/ads";
-import { AdRotator } from "./AdRotator";
 import { Logo } from "./Logo";
 
 function useTodayLabel() {
@@ -29,32 +27,26 @@ export function Header() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5">
           <span className="label-mono text-gold-deep">{today || "\u00a0"}</span>
           <nav className="hidden items-center gap-4 md:flex">
-            {["Anuncie", "Anunciar"].map((item) => (
-              <a
-                key={item}
-                href="#anunciar"
-                className="label-mono text-muted-foreground transition-colors hover:text-gold"
-              >
-                {item}
-              </a>
-            ))}
+            <a
+              href="#publicar"
+              className="label-mono text-gold transition-colors hover:text-gold-deep"
+            >
+              PUBLIQUE SUA MATÉRIA
+            </a>
+            <a
+              href="#anunciar"
+              className="label-mono text-gold transition-colors hover:text-gold-deep"
+            >
+              ANUNCIE SUA MARCA
+            </a>
           </nav>
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-5 px-4 py-7 md:flex-row md:justify-between">
-        <div className="hidden md:block">
-          <AdRotator ads={headerAds} />
-        </div>
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-5 px-4 py-7">
         <Link to="/" aria-label="Revista Évoluer — página inicial">
           <Logo />
         </Link>
-        <a
-          href="#anunciar"
-          className="label-mono bg-gold px-6 py-3 text-primary-foreground transition-colors hover:bg-gold-deep"
-        >
-          Anunciar
-        </a>
       </div>
 
       <nav
@@ -90,3 +82,4 @@ export function Header() {
     </header>
   );
 }
+
