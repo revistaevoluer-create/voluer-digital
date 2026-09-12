@@ -1,6 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { categories, editorialPillars, slugify } from "@/data/content";
+import { categories, categoryDescriptions, editorialPillars, slugify } from "@/data/content";
 import { Logo } from "./Logo";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export function Footer() {
   return (
