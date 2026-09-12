@@ -55,25 +55,38 @@ export function Header() {
         </Link>
       </div>
 
-      <nav
-        aria-label="Categorias"
-        className="mx-auto max-w-6xl overflow-x-auto border-t border-border px-4"
-      >
-        <ul className="flex min-w-max items-center gap-6 py-3.5">
-          {categories.map((category) => (
-            <li key={category}>
-              <Link
-                to="/categoria/$slug"
-                params={{ slug: slugify(category) }}
-                className="label-mono whitespace-nowrap text-muted-foreground transition-colors hover:text-gold"
-                activeProps={{ className: "label-mono whitespace-nowrap text-gold" }}
-              >
-                {category}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <TooltipProvider delayDuration={150}>
+        <nav
+          aria-label="Categorias"
+          className="mx-auto max-w-6xl overflow-x-auto border-t border-border px-4"
+        >
+          <ul className="flex min-w-max items-center gap-6 py-3.5">
+            {categories.map((category) => (
+              <li key={category}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      to="/categoria/$slug"
+                      params={{ slug: slugify(category) }}
+                      className="label-mono whitespace-nowrap text-muted-foreground transition-colors hover:text-gold"
+                      activeProps={{ className: "label-mono whitespace-nowrap text-gold" }}
+                    >
+                      {category}
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent
+                    side="bottom"
+                    sideOffset={8}
+                    className="max-w-xs border border-gold-deep/40 bg-ink px-4 py-3 text-xs leading-relaxed text-gold shadow-gold/10"
+                  >
+                    {categoryDescriptions[category]}
+                  </TooltipContent>
+                </Tooltip>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </TooltipProvider>
 
       <div className="overflow-hidden bg-gold py-2">
         <div className="ticker-track">
