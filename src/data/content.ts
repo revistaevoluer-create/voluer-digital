@@ -60,7 +60,7 @@ export type Article = {
 export const articles: Article[] = [
   {
     slug: "do-direito-a-psicologia-a-trajetoria-de-nair-saboia",
-    category: "Jurídico",
+    category: "CARREIRAS",
     title: "Do Direito à Psicologia: a trajetória de Nair Saboia",
     excerpt:
       "Na prática do Direito de Família, Nair Saboia percebeu que muitos conflitos que chegam ao Judiciário carregam dores emocionais que a aplicação da lei, sozinha, não consegue resolver.",
@@ -80,7 +80,7 @@ export const articles: Article[] = [
   },
   {
     slug: "o-poder-silencioso-das-mulheres-que-redesenham-o-capitalismo-brasileiro",
-    category: "Negócios",
+    category: "NEGÓCIOS",
     title: "O poder silencioso das mulheres que redesenham o capitalismo brasileiro",
     excerpt:
       "De Minas Gerais ao Nordeste, líderes femininas constroem impérios longe dos holofotes e provam que a nova geração de executivas joga com outras regras.",
@@ -96,7 +96,7 @@ export const articles: Article[] = [
   },
   {
     slug: "a-nova-medicina-preventiva-chega-ao-interior",
-    category: "Saúde",
+    category: "LIFESTYLE",
     title: "A nova medicina preventiva chega ao interior",
     excerpt:
       "Programas de rastreamento precoce começam a mudar indicadores em cidades com menos de 50 mil habitantes.",
@@ -111,7 +111,7 @@ export const articles: Article[] = [
   },
   {
     slug: "o-minimalismo-brasileiro-que-conquistou-as-passarelas",
-    category: "Moda",
+    category: "LIFESTYLE",
     title: "O minimalismo brasileiro que conquistou as passarelas",
     excerpt:
       "Alfaiataria leve, tecidos naturais e uma paleta contida definem a estação que aposta na permanência.",
@@ -126,7 +126,7 @@ export const articles: Article[] = [
   },
   {
     slug: "inteligencia-artificial-nas-redacoes-brasileiras",
-    category: "Tecnologia",
+    category: "TECNOLOGIA & INOVAÇÃO",
     title: "Inteligência artificial nas redações brasileiras",
     excerpt:
       "Editores discutem os limites entre apuração humana e automação na produção de notícias.",
@@ -141,7 +141,7 @@ export const articles: Article[] = [
   },
   {
     slug: "selecao-feminina-garante-vaga-na-final",
-    category: "Esporte",
+    category: "CULTURA",
     title: "Seleção feminina garante vaga na final do Sul-Americano",
     excerpt: "Vitória construída no segundo tempo coloca o Brasil de volta à decisão do torneio.",
     author: "Redação Évoluer",
@@ -155,7 +155,7 @@ export const articles: Article[] = [
   },
   {
     slug: "filme-brasileiro-estreia-em-cannes",
-    category: "Entretenimento e Cultura",
+    category: "CULTURA",
     title: "Filme brasileiro estreia em Cannes e conquista prêmio de documentário",
     excerpt: "Produção independente filmada no sertão emociona a crítica internacional.",
     author: "Redação Évoluer",
