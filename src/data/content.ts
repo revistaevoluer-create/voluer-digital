@@ -7,18 +7,33 @@ import artCinema from "@/assets/art-cinema.jpg";
 import nairSaboia from "@/assets/nair-saboia-hero-reframed.jpg.asset.json";
 
 export const categories = [
-  "Saúde",
-  "Moda",
-  "Beleza",
-  "Jurídico",
-  "Tecnologia",
-  "Esporte",
-  "Negócios",
-  "Entretenimento e Cultura",
-  "Pets e Mundo Animal",
-  "Influencer",
-  "Educação",
+  "PERSONALIDADES",
+  "CARREIRAS",
+  "NEGÓCIOS",
+  "TECNOLOGIA & INOVAÇÃO",
+  "LIFESTYLE",
+  "CULTURA",
+  "COMPORTAMENTO",
+  "EDUCAÇÃO & SOCIEDADE",
 ];
+
+export const categoryDescriptions: Record<string, string> = {
+  PERSONALIDADES: "Pessoas que têm uma trajetória, uma história ou algo relevante para contar.",
+  CARREIRAS:
+    "Profissões, trajetórias profissionais, mudanças de carreira, conquistas, desafios e novos caminhos.",
+  NEGÓCIOS:
+    "Empreendedorismo, empresas, liderança, gestão, marcas e histórias de quem construiu algo.",
+  "TECNOLOGIA & INOVAÇÃO":
+    "Inteligência artificial, transformação digital, novas ferramentas, ideias, soluções e pessoas que estão fazendo diferente.",
+  LIFESTYLE:
+    "Estilo de vida, experiências, escolhas, viagens, gastronomia, moda, beleza, bem-estar e tendências do cotidiano.",
+  CULTURA:
+    "Livros, literatura, arte, música, cinema, eventos, manifestações culturais e pessoas que movimentam a cultura.",
+  COMPORTAMENTO:
+    "Relações, hábitos, tendências sociais, mudanças de comportamento e temas que ajudam a compreender a sociedade.",
+  "EDUCAÇÃO & SOCIEDADE":
+    "Educação, projetos sociais, cidadania, instituições, iniciativas transformadoras e temas relevantes para a vida coletiva.",
+};
 
 export const editorialPillars = ["Negócios", "Carreira", "Liderança", "Personalidade"];
 
