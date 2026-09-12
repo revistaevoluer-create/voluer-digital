@@ -1,6 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { categories, editorialPillars, slugify } from "@/data/content";
+import { categories, categoryDescriptions, editorialPillars, slugify } from "@/data/content";
 import { Logo } from "./Logo";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export function Footer() {
   return (
@@ -18,21 +24,34 @@ export function Footer() {
             ))}
           </p>
 
-          <nav aria-label="Editorias" className="mt-10">
-            <ul className="flex flex-wrap justify-center gap-x-5 gap-y-3">
-            {categories.map((category) => (
-              <li key={category}>
-                <Link
-                  to="/categoria/$slug"
-                  params={{ slug: slugify(category) }}
-                  className="label-mono text-muted-foreground transition-colors hover:text-gold"
-                >
-                  {category}
-                </Link>
-              </li>
-            ))}
-            </ul>
-          </nav>
+          <TooltipProvider delayDuration={150}>
+            <nav aria-label="Editorias" className="mt-10">
+              <ul className="flex flex-wrap justify-center gap-x-5 gap-y-3">
+                {categories.map((category) => (
+                  <li key={category}>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Link
+                          to="/categoria/$slug"
+                          params={{ slug: slugify(category) }}
+                          className="label-mono text-muted-foreground transition-colors hover:text-gold"
+                        >
+                          {category}
+                        </Link>
+                      </TooltipTrigger>
+                      <TooltipContent
+                        side="top"
+                        sideOffset={8}
+                        className="max-w-xs border border-gold-deep/40 bg-ink px-4 py-3 text-xs leading-relaxed text-gold shadow-gold/10"
+                      >
+                        {categoryDescriptions[category]}
+                      </TooltipContent>
+                    </Tooltip>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </TooltipProvider>
 
           <div className="mt-10 w-full border-t border-border/70 pt-6">
             <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
