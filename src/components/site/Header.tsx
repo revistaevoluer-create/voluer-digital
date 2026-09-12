@@ -1,7 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { categories, slugify } from "@/data/content";
+import { categories, categoryDescriptions, slugify } from "@/data/content";
 import { Logo } from "./Logo";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 function useTodayLabel() {
   const [label, setLabel] = useState("");
