@@ -6,6 +6,7 @@ import artEsporte from "@/assets/art-esporte.jpg";
 import artCinema from "@/assets/art-cinema.jpg";
 import nairSaboia from "@/assets/nair-saboia-hero-reframed.jpg.asset.json";
 import luysaCurty from "@/assets/luysa-curty-destaque.jpg.asset.json";
+import espacoTerra from "@/assets/espaco-terra-ambiente.jpg.asset.json";
 
 export const categories = [
   "PERSONALIDADES",
@@ -83,14 +84,14 @@ export const articles: Article[] = [
   {
     slug: "luysa-curty-espaco-terra-escuta-corpo-cuidado",
     category: "NEGÓCIOS",
-    title: "Espaço Terra: Luysa Curty cria em Icaraí um ambiente dedicado à escuta",
+    title: "Espaço Terra: Psicóloga cria, em Icaraí, um ambiente dedicado à escuta",
     excerpt:
-      "Inaugurado em 2025 pela psicóloga, o Espaço Terra reúne atendimento humanizado, atenção ao corpo e acolhimento em Icaraí.",
+      "Inaugurado em 2025, pela psicóloga Luysa Curty, o Espaço Terra reúne atendimento humanizado, atenção ao corpo e acolhimento em Icaraí.",
     author: "Revista Évoluer",
     date: "13 set. 2026",
     readingTime: "3 min",
-    image: luysaCurty.url,
-    imagePosition: "top",
+    image: espacoTerra.url,
+    imagePosition: "center",
     body: [
       "Em 2025, a psicóloga Luysa Curty inaugurou o Espaço Terra, em Icaraí. O ambiente acolhedor traduz sua proposta de atendimento humanizado: um convite à escuta atenta e ao encontro de cada pessoa com sua própria história.",
       "O espaço nasceu como extensão de uma maneira de cuidar. No consultório, Luysa atende adultos presencialmente; para quem está em outras localidades ou prefere outra modalidade, oferece também atendimento online.",
