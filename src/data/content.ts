@@ -5,6 +5,7 @@ import artTecnologia from "@/assets/art-tecnologia.jpg";
 import artEsporte from "@/assets/art-esporte.jpg";
 import artCinema from "@/assets/art-cinema.jpg";
 import nairSaboia from "@/assets/nair-saboia-hero-reframed.jpg.asset.json";
+import luysaCurty from "@/assets/luysa-curty-destaque.jpg.asset.json";
 
 export const categories = [
   "PERSONALIDADES",
@@ -54,6 +55,7 @@ export type Article = {
   date: string;
   readingTime: string;
   image: string;
+  imagePosition?: "center" | "top";
   body: string[];
 };
 
@@ -76,6 +78,26 @@ export const articles: Article[] = [
       "A nova etapa dessa trajetória ganha forma com o projeto Atendimento Conectado, concebido como um modelo de consultoria jurídica voltado à gestão de conflitos emocionais no período pré-litígio. A iniciativa pretende acolher famílias em momentos de crise antes mesmo do ajuizamento de uma ação, criando um espaço seguro para que os aspectos jurídicos e humanos do conflito sejam compreendidos com mais profundidade.",
       "Com a formação em Psicologia em andamento, Nair busca qualificar ainda mais sua atuação: mediar acordos com empatia, compreender melhor as necessidades envolvidas e ajudar seus clientes a atravessar transições familiares dolorosas com estabilidade e dignidade.",
       "Sua trajetória reafirma uma premissa essencial: o Direito é feito por pessoas e para pessoas. E, em sua forma mais nobre, exige conhecimento, responsabilidade e, sobretudo, humanidade.",
+    ],
+  },
+  {
+    slug: "luysa-curty-espaco-terra-escuta-corpo-cuidado",
+    category: "CARREIRAS",
+    title: "Luysa Curty: um espaço para acolher, escutar e cuidar",
+    excerpt:
+      "Em Icaraí, a psicóloga criou o Espaço Terra e reúne formação clínica, atenção ao corpo e atendimento humanizado.",
+    author: "Revista Évoluer",
+    date: "13 set. 2026",
+    readingTime: "3 min",
+    image: luysaCurty.url,
+    imagePosition: "top",
+    body: [
+      "Em 2025, a psicóloga Luysa Curty inaugurou o Espaço Terra, em Icaraí. O ambiente acolhedor traduz sua proposta de atendimento humanizado: um convite à escuta atenta e ao encontro de cada pessoa com sua própria história.",
+      "O espaço nasceu como extensão de uma maneira de cuidar. No consultório, Luysa atende adultos presencialmente; para quem está em outras localidades ou prefere outra modalidade, oferece também atendimento online.",
+      "Graduada em Psicologia em 2019, ela construiu um percurso de estudos que reúne a clínica, as relações humanas e a dimensão social das experiências individuais. Em 2021, concluiu a pós-graduação em Gênero, Sexualidade e Direitos Humanos na Escola Nacional de Saúde Pública da Fiocruz e a formação clínica em Gestalt-Terapia pelo Instituto Ciclos.",
+      "Hoje, sua prática se orienta pela Abordagem Corporal Reichiana. Nessa perspectiva, a escuta clínica também considera as expressões do corpo, sem reduzir a pessoa a um diagnóstico ou a uma única dimensão da vida.",
+      "O interesse pelo corpo como parte da experiência humana se reflete em seus estudos atuais. Luysa cursa a formação plena em Terapia Corporal Reichiana pelo Centro de Análise do Movimento Vivo (Centro AMV) e, na mesma instituição, a formação de Terapeutas de Crianças e Adolescentes. Sua atuação clínica informada atualmente se concentra no atendimento de adultos.",
+      "No Espaço Terra, a proposta de cuidado se expressa tanto no trabalho clínico quanto na atmosfera do ambiente. Sua inauguração marca uma etapa da trajetória de Luysa: um lugar para que a escuta encontre tempo, presença e condições de florescer.",
     ],
   },
   {
