@@ -82,10 +82,10 @@ export const articles: Article[] = [
   },
   {
     slug: "luysa-curty-espaco-terra-escuta-corpo-cuidado",
-    category: "CARREIRAS",
-    title: "Luysa Curty: um espaço para acolher, escutar e cuidar",
+    category: "NEGÓCIOS",
+    title: "Espaço Terra: Luysa Curty cria em Icaraí um ambiente dedicado à escuta",
     excerpt:
-      "Em Icaraí, a psicóloga criou o Espaço Terra e reúne formação clínica, atenção ao corpo e atendimento humanizado.",
+      "Inaugurado em 2025 pela psicóloga, o Espaço Terra reúne atendimento humanizado, atenção ao corpo e acolhimento em Icaraí.",
     author: "Revista Évoluer",
     date: "13 set. 2026",
     readingTime: "3 min",
