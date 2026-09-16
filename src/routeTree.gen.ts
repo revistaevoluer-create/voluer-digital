@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CategoriaSlugRouteImport } from './routes/categoria.$slug'
 import { Route as ColunistasIndexRouteImport } from './routes/colunistas.index'
+import { Route as ColunistasInscricaoRouteImport } from './routes/colunistas.inscricao'
 import { Route as MateriaSlugRouteImport } from './routes/materia.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -29,6 +30,11 @@ const ColunistasIndexRoute = ColunistasIndexRouteImport.update({
   path: '/colunistas/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ColunistasInscricaoRoute = ColunistasInscricaoRouteImport.update({
+  id: '/colunistas/inscricao',
+  path: '/colunistas/inscricao',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MateriaSlugRoute = MateriaSlugRouteImport.update({
   id: '/materia/$slug',
   path: '/materia/$slug',
@@ -38,12 +44,14 @@ const MateriaSlugRoute = MateriaSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
+  '/colunistas/inscricao': typeof ColunistasInscricaoRoute
   '/materia/$slug': typeof MateriaSlugRoute
   '/colunistas/': typeof ColunistasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
+  '/colunistas/inscricao': typeof ColunistasInscricaoRoute
   '/materia/$slug': typeof MateriaSlugRoute
   '/colunistas': typeof ColunistasIndexRoute
 }
@@ -51,20 +59,38 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
+  '/colunistas/inscricao': typeof ColunistasInscricaoRoute
   '/materia/$slug': typeof MateriaSlugRoute
   '/colunistas/': typeof ColunistasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/categoria/$slug' | '/materia/$slug' | '/colunistas/'
+  fullPaths:
+    | '/'
+    | '/categoria/$slug'
+    | '/colunistas/inscricao'
+    | '/materia/$slug'
+    | '/colunistas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/categoria/$slug' | '/materia/$slug' | '/colunistas'
-  id: '__root__' | '/' | '/categoria/$slug' | '/materia/$slug' | '/colunistas/'
+  to:
+    | '/'
+    | '/categoria/$slug'
+    | '/colunistas/inscricao'
+    | '/materia/$slug'
+    | '/colunistas'
+  id:
+    | '__root__'
+    | '/'
+    | '/categoria/$slug'
+    | '/colunistas/inscricao'
+    | '/materia/$slug'
+    | '/colunistas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CategoriaSlugRoute: typeof CategoriaSlugRoute
+  ColunistasInscricaoRoute: typeof ColunistasInscricaoRoute
   MateriaSlugRoute: typeof MateriaSlugRoute
   ColunistasIndexRoute: typeof ColunistasIndexRoute
 }
@@ -92,6 +118,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ColunistasIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/colunistas/inscricao': {
+      id: '/colunistas/inscricao'
+      path: '/colunistas/inscricao'
+      fullPath: '/colunistas/inscricao'
+      preLoaderRoute: typeof ColunistasInscricaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/materia/$slug': {
       id: '/materia/$slug'
       path: '/materia/$slug'
@@ -105,6 +138,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CategoriaSlugRoute: CategoriaSlugRoute,
+  ColunistasInscricaoRoute: ColunistasInscricaoRoute,
   MateriaSlugRoute: MateriaSlugRoute,
   ColunistasIndexRoute: ColunistasIndexRoute,
 }
