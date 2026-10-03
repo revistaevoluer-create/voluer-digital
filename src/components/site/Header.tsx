@@ -32,16 +32,16 @@ export function Header() {
       <div className="border-b border-border/60 bg-ink">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5">
           <span className="label-mono text-gold-deep">{today || "\u00a0"}</span>
-          <nav className="hidden items-center gap-4 md:flex">
-            <a
-              href="#publicar"
+          <nav className="flex items-center gap-4">
+            <Link
+              to="/publique"
               className="label-mono text-gold transition-colors hover:text-gold-deep"
             >
               PUBLIQUE SUA MATÉRIA
-            </a>
+            </Link>
             <a
               href="#anunciar"
-              className="label-mono text-gold transition-colors hover:text-gold-deep"
+              className="label-mono hidden text-gold transition-colors hover:text-gold-deep md:inline"
             >
               ANUNCIE SUA MARCA
             </a>

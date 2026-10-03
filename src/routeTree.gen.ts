@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PubliqueRouteImport } from './routes/publique'
 import { Route as CategoriaSlugRouteImport } from './routes/categoria.$slug'
 import { Route as ColunistasIndexRouteImport } from './routes/colunistas.index'
 import { Route as ColunistasInscricaoRouteImport } from './routes/colunistas.inscricao'
@@ -18,6 +19,11 @@ import { Route as MateriaSlugRouteImport } from './routes/materia.$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PubliqueRoute = PubliqueRouteImport.update({
+  id: '/publique',
+  path: '/publique',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CategoriaSlugRoute = CategoriaSlugRouteImport.update({
@@ -43,6 +49,7 @@ const MateriaSlugRoute = MateriaSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/publique': typeof PubliqueRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
   '/colunistas/inscricao': typeof ColunistasInscricaoRoute
   '/materia/$slug': typeof MateriaSlugRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/publique': typeof PubliqueRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
   '/colunistas/inscricao': typeof ColunistasInscricaoRoute
   '/materia/$slug': typeof MateriaSlugRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/publique': typeof PubliqueRoute
   '/categoria/$slug': typeof CategoriaSlugRoute
   '/colunistas/inscricao': typeof ColunistasInscricaoRoute
   '/materia/$slug': typeof MateriaSlugRoute
@@ -67,6 +76,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/publique'
     | '/categoria/$slug'
     | '/colunistas/inscricao'
     | '/materia/$slug'
@@ -74,6 +84,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/publique'
     | '/categoria/$slug'
     | '/colunistas/inscricao'
     | '/materia/$slug'
@@ -81,6 +92,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/publique'
     | '/categoria/$slug'
     | '/colunistas/inscricao'
     | '/materia/$slug'
@@ -89,6 +101,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PubliqueRoute: typeof PubliqueRoute
   CategoriaSlugRoute: typeof CategoriaSlugRoute
   ColunistasInscricaoRoute: typeof ColunistasInscricaoRoute
   MateriaSlugRoute: typeof MateriaSlugRoute
@@ -102,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/publique': {
+      id: '/publique'
+      path: '/publique'
+      fullPath: '/publique'
+      preLoaderRoute: typeof PubliqueRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/categoria/$slug': {
@@ -137,6 +157,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PubliqueRoute: PubliqueRoute,
   CategoriaSlugRoute: CategoriaSlugRoute,
   ColunistasInscricaoRoute: ColunistasInscricaoRoute,
   MateriaSlugRoute: MateriaSlugRoute,
