@@ -17,7 +17,7 @@ type Search = { plano?: PlanId };
 
 export const Route = createFileRoute("/colunistas/inscricao")({
   validateSearch: (search: Record<string, unknown>): Search => {
-    const plano = String(search.plano ?? "");
+    const plano = String(search["plano"] ?? "");
     return plans.some((p) => p.id === plano) ? { plano: plano as PlanId } : {};
   },
   head: () => ({
@@ -119,24 +119,24 @@ function InscricaoPage() {
   function validate(current: number) {
     const next: Record<string, string> = {};
     if (current === 0) {
-      if (form.name.trim().length < 3) next.name = "Informe seu nome completo.";
+      if (form.name.trim().length < 3) next["name"] = "Informe seu nome completo.";
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email.trim()))
-        next.email = "Informe um e-mail válido para contato.";
+        next["email"] = "Informe um e-mail válido para contato.";
     }
     if (current === 1) {
-      if (!form.profession.trim()) next.profession = "Informe sua profissão.";
-      if (!form.area.trim()) next.area = "Informe sua área de atuação.";
+      if (!form.profession.trim()) next["profession"] = "Informe sua profissão.";
+      if (!form.area.trim()) next["area"] = "Informe sua área de atuação.";
       if (form.presentation.trim().length < 40)
-        next.presentation = "Escreva ao menos algumas linhas de apresentação (mín. 40 caracteres).";
+        next["presentation"] = "Escreva ao menos algumas linhas de apresentação (mín. 40 caracteres).";
     }
     if (current === 2) {
-      if (form.themes.trim().length < 5) next.themes = "Liste pelo menos um tema de domínio.";
-      if (!form.audience.trim()) next.audience = "Descreva o público que você quer alcançar.";
-      if (!form.goal.trim()) next.goal = "Conte qual é o seu objetivo com a coluna.";
-      if (!form.writing) next.writing = "Selecione sua experiência com escrita.";
+      if (form.themes.trim().length < 5) next["themes"] = "Liste pelo menos um tema de domínio.";
+      if (!form.audience.trim()) next["audience"] = "Descreva o público que você quer alcançar.";
+      if (!form.goal.trim()) next["goal"] = "Conte qual é o seu objetivo com a coluna.";
+      if (!form.writing) next["writing"] = "Selecione sua experiência com escrita.";
     }
     if (current === 3) {
-      if (!form.plan) next.plan = "Escolha a frequência de publicação.";
+      if (!form.plan) next["plan"] = "Escolha a frequência de publicação.";
     }
     setErrors(next);
     if (Object.keys(next).length > 0) {
