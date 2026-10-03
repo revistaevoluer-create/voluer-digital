@@ -4,9 +4,9 @@ import artModa from "@/assets/art-moda.jpg";
 import artTecnologia from "@/assets/art-tecnologia.jpg";
 import artEsporte from "@/assets/art-esporte.jpg";
 import artCinema from "@/assets/art-cinema.jpg";
-import nairSaboia from "@/assets/nair-saboia-hero-reframed.jpg.asset.json";
+import nairSaboia from "@/assets/nair-saboia-hero-reframed.jpg";
 import luysaCurty from "@/assets/luysa-curty-destaque.jpg.asset.json";
-import espacoTerra from "@/assets/espaco-terra-ambiente.jpg.asset.json";
+import espacoTerra from "@/assets/espaco-terra-ambiente.jpg";
 
 export const categories = [
   "PERSONALIDADES",
@@ -70,7 +70,7 @@ export const articles: Article[] = [
     author: "Revista Évoluer",
     date: "8 set. 2026",
     readingTime: "8 min",
-    image: nairSaboia.url,
+    image: nairSaboia,
     body: [
       "Divórcios, disputas de guarda, partilhas e outros conflitos familiares frequentemente revelam algo que vai além da controvérsia jurídica: rupturas, medos, ressentimentos e histórias que ainda não foram elaboradas.",
       "Foi nesse cotidiano que Nair compreendeu que o advogado pode exercer um papel que ultrapassa o domínio técnico da legislação. Identificar a dimensão emocional do conflito permite construir caminhos mais conscientes e, muitas vezes, evitar que a disputa se transforme em um litígio ainda mais doloroso.",
@@ -90,7 +90,7 @@ export const articles: Article[] = [
     author: "Revista Évoluer",
     date: "13 set. 2026",
     readingTime: "3 min",
-    image: espacoTerra.url,
+    image: espacoTerra,
     imagePosition: "center",
     body: [
       "Em 2025, a psicóloga Luysa Curty inaugurou o Espaço Terra, em Icaraí. O ambiente acolhedor traduz sua proposta de atendimento humanizado: um convite à escuta atenta e ao encontro de cada pessoa com sua própria história.",
